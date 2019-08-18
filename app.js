@@ -39,10 +39,15 @@ app.use((req, res, next) => {
  * Route with documentation to build your project with prismic
  */
 app.route('/').get(function(req, res) {
-  req.prismic.api.getByUID('page', 'test-page').then((document) => {
-    res.render('index', { document });
+    res.render('index');
+});
+
+app.route('/work-subpage/:projectId').get(function(req, res) {
+  req.prismic.api.getByUID('work-subpage', req.params.projectId).then((document) => {
+    res.render('work-subpage', { document });
   });
 });
+
 
 /*
  * Preconfigured prismic preview

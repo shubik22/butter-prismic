@@ -1,7 +1,6 @@
-extends ./layout.pug
-
-block body
-  div.welcome
-    img(src=document.data.image.url, class='star')
-    != PrismicDOM.RichText.asHtml(document.data.title, ctx.linkResolver)
-    != PrismicDOM.RichText.asHtml(document.data.description, ctx.linkResolver)
+div.welcome
+  h1 Hello world!
+  div
+    a(href="/work-subpage/other-half") Other Half
+  div
+    a(href="/work-subpage/hifi") Hifi
