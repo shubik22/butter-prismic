@@ -42,6 +42,10 @@ app.route('/').get(function(req, res) {
     res.render('index');
 });
 
+app.route('/services.html').get(function(req, res) {
+    res.render('services');
+});
+
 app.route('/work-subpage/:projectId').get(function(req, res) {
   req.prismic.api.getByUID('work-subpage', req.params.projectId).then((document) => {
     res.render('work-subpage', { document });
