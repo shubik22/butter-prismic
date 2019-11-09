@@ -31,9 +31,11 @@ app.use((req, res, next) => {
   });
 });
 
-/*
- *  --[ INSERT YOUR ROUTES HERE ]--
- */
+const HTML_PAGES = [
+  'services',
+  'contact',
+  'news'
+];
 
 /*
  * Route with documentation to build your project with prismic
@@ -42,9 +44,11 @@ app.route('/').get(function(req, res) {
     res.render('index');
 });
 
-app.route('/services.html').get(function(req, res) {
-    res.render('services');
-});
+for (let page of HTML_PAGES) {
+  app.route(`/${page}.html`).get(function(req, res) {
+      res.render(page);
+  });
+}
 
 app.route('/work-subpage/:projectId').get(function(req, res) {
   req.prismic.api.getByUID('work-subpage', req.params.projectId).then((document) => {
