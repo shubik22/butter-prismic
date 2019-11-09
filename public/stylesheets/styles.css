@@ -12,7 +12,6 @@ h1 {
   margin: 0.67em 0;
 }
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -100,7 +99,6 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -116,7 +114,6 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -152,15 +149,12 @@ template {
   margin: 0;
   padding: 0;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .grid__item {
   vertical-align: top;
   width: 100%;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .grid--rev {
@@ -191,7 +185,6 @@ template {
 }
 .grid--middle {
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .grid--bottom > .grid__item {
@@ -1789,7 +1782,6 @@ template {
   margin: auto;
   max-width: 100%;
   padding: 0 30px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1800,14 +1792,12 @@ template {
 .slick-slider {
   position: relative;
   display: block;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -2068,13 +2058,10 @@ a:hover {
 }
 .text {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   padding: 10px;
@@ -2190,13 +2177,10 @@ a:hover {
 }
 .content {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   padding: 10px;
@@ -2326,12 +2310,9 @@ a:hover {
 .footer {
   padding: 30px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .footer > div {
@@ -2347,12 +2328,9 @@ a:hover {
 }
 .footer-newsletter {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-family: 'Transcript Trial';
 }
@@ -2368,7 +2346,6 @@ a:hover {
 @media only screen and (max-width: 1199px) {
   .footer-newsletter {
     -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
     order: -1;
     width: 100%;
   }
@@ -2377,7 +2354,6 @@ a:hover {
   border-bottom: 1px solid black;
   padding: 0 0 10px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .footer-email form input[type="email"] {
@@ -2385,7 +2361,6 @@ a:hover {
   border: 0;
   width: 200px;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 .footer-email form input[type="email"]::-webkit-input-placeholder {
@@ -2412,7 +2387,6 @@ a:hover {
   background: white;
   z-index: 10;
   padding: 30px 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   opacity: 1;
   -webkit-transition: opacity 1s;
@@ -2433,15 +2407,11 @@ a:hover {
   padding: 0 0 30px;
   width: 100%;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
 }
@@ -2469,7 +2439,6 @@ a:hover {
 @media only screen and (max-width: 1199px) {
   .popup-header-text {
     -webkit-box-ordinal-group: 11;
-    -ms-flex-order: 10;
     order: 10;
     width: 100%;
     padding: 30px 0 0;
@@ -2544,7 +2513,7 @@ a:hover {
   letter-spacing: 0.03em;
   max-width: 80%;
 }
-.popup-work-subpages .work-description, .popup-work-subpages .credit-section {
+.popup-work-subpages p {
   font-family: 'Transcript Trial';
   font-size: 16px;
   line-height: 1.5em;
@@ -2587,7 +2556,6 @@ a:hover {
   padding: 15px;
   width: 100%;
   margin-bottom: 20px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .contact-form input[type="email"]::-webkit-input-placeholder, .contact-form input[type="text"]::-webkit-input-placeholder {
@@ -2609,7 +2577,6 @@ a:hover {
   padding: 15px 15px 10px;
   width: 100%;
   margin-bottom: 20px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -2631,7 +2598,6 @@ a:hover {
   border: 2px solid black;
   text-align: left;
   padding: 20px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .contact-form .contact-message {
@@ -2640,7 +2606,7 @@ a:hover {
 }
 .popup-image img {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 .popup-slider, .popup-slide {
   width: 100%;
@@ -2695,4 +2661,23 @@ a:hover {
 }
 .uppercase {
   text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+.text a {
+  padding: 5px 10px 3px;
+  display: block;
+  line-height: 1em;
+  color: black;
+  -webkit-transition: none;
+  transition: none;
+}
+.text a:hover {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+.underline {
+  text-decoration: underline;
 }
