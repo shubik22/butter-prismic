@@ -33,8 +33,7 @@ app.use((req, res, next) => {
 
 const HTML_PAGES = [
   'services',
-  'contact',
-  'news'
+  'contact'
 ];
 
 /*
@@ -56,6 +55,14 @@ app.route('/work-subpage/:projectId').get(function(req, res) {
   });
 });
 
+app.route('/news.html').get(function(req, res) {
+  req.prismic.api.query(
+      Prismic.Predicates.at('document.type', 'news-post'),
+      { orderings : '[my.news-post.date desc]' }
+  ).then(function(response) {
+    res.render('news', { newsItems: response.results });
+  });
+});
 
 /*
  * Preconfigured prismic preview
