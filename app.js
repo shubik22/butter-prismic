@@ -3,6 +3,14 @@ const PrismicDOM = require('prismic-dom');
 const request = require('request');
 const PrismicConfig = require('./prismic-configuration');
 const app = require('./config');
+const Onboarding = require('./onboarding');
+
+const PORT = app.get('port');
+
+app.listen(PORT, () => {
+  Onboarding.trigger();
+  process.stdout.write(`Point your browser to: http://localhost:${PORT}\n`);
+});
 
 // Middleware to inject prismic context
 app.use((req, res, next) => {
@@ -77,5 +85,3 @@ app.get('/preview', (req, res) => {
     res.send(400, 'Missing token from querystring');
   }
 });
-
-module.exports = app;
