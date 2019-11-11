@@ -2,32 +2,31 @@ extends ./layout.pug
 
 block body
   div(class="popup popup-work-subpages")
-    div(class="popup-slider")
-      div(class="popup-slide")
-        div(class="popup-header")
-          h3= document.data["work-subpage-title"][0].text
-        div(class="grid work-item")
-          div(class="grid__item medium-down--one-whole")
-            div(class="popup-image")
-              img(src=document.data['hero-image'].url)
-        .grid.work-item
-          .three-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole
-            each creditSection in document.data["project-credits"]
-              .credit-section
-                p
-                  | #{creditSection["credit-key"]}
-                p.credit-section-bold
-                  | #{creditSection["credit-value"]}
-          .five-tenths.grid__item.push--large--one-tenth.medium-down--one-whole
-            each section in document.data["project-description"]
-              div(class="work-description") !{PrismicDOM.RichText.asHtml(section["description-paragraph"])}
-        each slice in document.data.body
-          case slice.slice_type
-            when 'single-photo'
-              div(class="grid work-item")
-                div(class="grid__item medium-down--one-whole")
-                  div(class="popup-image")
-                    img(src=slice.primary["single-image"].url)
-            when 'paragraph'
-              .grid.work-item
-                .work-statement.four-tenths.push--large--three-tenths.medium-down--one-whole.grid__item !{PrismicDOM.RichText.asHtml(slice.primary["text-paragraph"])}
+    div(class="popup-header")
+      h3= document.data["work-subpage-title"][0].text
+      include html/work-page-link.html
+    div(class="grid work-item")
+      div(class="grid__item medium-down--one-whole")
+        div(class="popup-image")
+          img(src=document.data['hero-image'].url)
+    .grid.work-item
+      .three-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole
+        each creditSection in document.data["project-credits"]
+          .credit-section
+            p
+              | #{creditSection["credit-key"]}
+            p.credit-section-bold
+              | #{creditSection["credit-value"]}
+      .five-tenths.grid__item.push--large--one-tenth.medium-down--one-whole
+        each section in document.data["project-description"]
+          div(class="work-description") !{PrismicDOM.RichText.asHtml(section["description-paragraph"])}
+    each slice in document.data.body
+      case slice.slice_type
+        when 'single-photo'
+          div(class="grid work-item")
+            div(class="grid__item medium-down--one-whole")
+              div(class="popup-image")
+                img(src=slice.primary["single-image"].url)
+        when 'paragraph'
+          .grid.work-item
+            .work-statement.four-tenths.push--large--three-tenths.medium-down--one-whole.grid__item !{PrismicDOM.RichText.asHtml(slice.primary["text-paragraph"])}

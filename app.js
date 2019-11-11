@@ -64,6 +64,12 @@ app.route('/news.html').get(function(req, res) {
   });
 });
 
+app.route('/work.html').get(function(req, res) {
+  req.prismic.api.getSingle('work-page').then(function(document) {
+    res.render('work', { document });
+  });
+});
+
 /*
  * Preconfigured prismic preview
  */
