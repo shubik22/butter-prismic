@@ -2687,3 +2687,6 @@ a {
 .work-description a {
   text-decoration: underline;
 }
+.news-row {
+  margin-bottom: 80px;
+}
