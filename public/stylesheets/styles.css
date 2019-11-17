@@ -2505,6 +2505,9 @@ a:hover {
   padding-bottom: 20px;
   cursor: pointer;
 }
+.popup-work .work-row {
+  margin-bottom: 40px;
+}
 .popup-work-subpages h3 {
   font-family: 'Transcript Trial';
   font-weight: bold;

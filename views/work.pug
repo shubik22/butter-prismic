@@ -7,7 +7,7 @@ block body
       each slice in document.data.body
         case slice.slice_type
           when 'single-column'
-            .grid
+            .grid.work-row
               a(href=`/work-subpage/${slice.primary['work-subpage-link'].uid}`)
                 .nine-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
                   .popup-image
@@ -16,7 +16,7 @@ block body
                     span= slice.primary.brand[0].text
                     span.popup-image-caption-right= slice.primary.services[0].text
           when 'two-columns'
-            .grid
+            .grid.work-row
               .four-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
                 a(href=`/work-subpage/${slice.primary['work-subpage-link-1'].uid}`)
                   .popup-image
