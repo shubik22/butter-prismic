@@ -95,6 +95,10 @@ a {
   border-bottom: 2px solid black;
   border-top: 2px solid black;
   position: relative;
+
+  .index-work {
+    margin-top: 50px;
+  }
 }
 
 .dots {
@@ -104,6 +108,7 @@ a {
   grid-auto-flow: row;
   position: relative;
   transition: opacity 1s;
+  border-bottom: 2px solid black;
   // grid-auto-rows: 50px;
   // grid-gap: 10px;
 
@@ -551,18 +556,19 @@ a {
       width: 100%;
     }
   }
-  .popup-image-caption-right {
-    float: right;
-  }
 
   .work-item {
     padding-bottom: 20px;
     cursor: pointer;
   }
+}
 
-  .work-row {
-    margin-bottom: 40px;
-  }
+.popup-image-caption-right {
+  float: right;
+}
+
+.work-row {
+  margin-bottom: 40px;
 }
 
 .popup-work-subpages {

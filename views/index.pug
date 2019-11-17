@@ -2,3 +2,6 @@ extends ./layout.pug
 
 block body
   include dots.html
+  include mixins/work.pug
+  div(class="index-work")
+    +work(document.data.body)

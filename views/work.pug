@@ -4,30 +4,5 @@ block body
   #work.popup
     include html/work-header.html
     .popup-work
-      each slice in document.data.body
-        case slice.slice_type
-          when 'single-column'
-            .grid.work-row
-              a(href=`/work-subpage/${slice.primary['work-subpage-link'].uid}`)
-                .nine-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
-                  .popup-image
-                    img(src=slice.primary.image.url)
-                  .popup-news-item.down--one-twelfth
-                    span= slice.primary.brand[0].text
-                    span.popup-image-caption-right= slice.primary.services[0].text
-          when 'two-columns'
-            .grid.work-row
-              .four-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
-                a(href=`/work-subpage/${slice.primary['work-subpage-link-1'].uid}`)
-                  .popup-image
-                    img(src=slice.primary['image-1'].url)
-                  .popup-news-item.down--one-twelfth
-                    span= slice.primary['brand-1'][0].text
-                    span.popup-image-caption-right= slice.primary['services-1'][0].text
-              .four-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
-                a(href=`/work-subpage/${slice.primary['work-subpage-link-2'].uid}`)
-                  .popup-image
-                    img(src=slice.primary['image-2'].url)
-                  .popup-news-item.down--one-twelfth
-                    span= slice.primary['brand-2'][0].text
-                    span.popup-image-caption-right= slice.primary['services-2'][0].text
+      include mixins/work.pug
+      +work(document.data.body)

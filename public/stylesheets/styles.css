@@ -2085,6 +2085,9 @@ a:hover {
   border-top: 2px solid black;
   position: relative;
 }
+.dots-container .index-work {
+  margin-top: 50px;
+}
 .dots {
   padding: 30px 0;
   display: grid;
@@ -2093,6 +2096,7 @@ a:hover {
   position: relative;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
+  border-bottom: 2px solid black;
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .dots {
@@ -2498,14 +2502,14 @@ a:hover {
 .popup-work .popup-image img {
   width: 100%;
 }
-.popup-work .popup-image-caption-right {
-  float: right;
-}
 .popup-work .work-item {
   padding-bottom: 20px;
   cursor: pointer;
 }
-.popup-work .work-row {
+.popup-image-caption-right {
+  float: right;
+}
+.work-row {
   margin-bottom: 40px;
 }
 .popup-work-subpages h3 {

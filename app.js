@@ -40,12 +40,14 @@ const HTML_PAGES = [
  * Route with documentation to build your project with prismic
  */
 app.route('/').get(function(req, res) {
-    res.render('index');
+  req.prismic.api.getSingle('work-page').then(function(document) {
+    res.render('index', { document });
+  });
 });
 
 for (let page of HTML_PAGES) {
   app.route(`/${page}.html`).get(function(req, res) {
-      res.render(page);
+     res.render(page);
   });
 }
 
@@ -57,8 +59,8 @@ app.route('/work-subpage/:projectId').get(function(req, res) {
 
 app.route('/news.html').get(function(req, res) {
   req.prismic.api.query(
-      Prismic.Predicates.at('document.type', 'news-post'),
-      { orderings : '[my.news-post.date desc]' }
+    Prismic.Predicates.at('document.type', 'news-post'),
+    { orderings : '[my.news-post.date desc]' }
   ).then(function(response) {
     res.render('news', { newsItems: response.results });
   });
