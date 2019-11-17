@@ -23,7 +23,7 @@ block body
             p
               | #{creditSection["credit-key"]}
             p.credit-section-bold
-              | #{creditSection["credit-value"]}
+              | !{creditSection["credit-value"]}
       .five-tenths.grid__item.push--large--one-tenth.medium-down--one-whole
         each section in document.data["project-description"]
           div(class="work-description") !{PrismicDOM.RichText.asHtml(section["description-paragraph"])}
