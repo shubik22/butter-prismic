@@ -97,7 +97,7 @@ a {
   position: relative;
 
   .index-work {
-    margin-top: 50px;
+    padding-top: 50px;
   }
 }
 
@@ -161,8 +161,6 @@ a {
         display: none;
     }
   }
-
-
 }
 
 .dot-inner {
@@ -569,6 +567,62 @@ a {
 
 .work-row {
   margin-bottom: 40px;
+}
+
+.popup-about {
+  padding-top: 30px;
+
+  .text-row {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid black;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  h1 {
+    font-family: 'Transcript Trial';
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.2em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Transcript Trial';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.45em;
+    letter-spacing: 0.03em;
+    max-width: 80%;
+  }
+
+  p {
+    font-family: 'Transcript Trial';
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 22px;
+    margin-top: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
+    li {
+      font-family: 'Transcript Trial';
+      font-size: 20px;
+      line-height: 1.75em;
+      text-transform: lowercase;
+    }
+  }
 }
 
 .popup-work-subpages {

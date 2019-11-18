@@ -72,6 +72,15 @@ app.route('/work.html').get(function(req, res) {
   });
 });
 
+app.route('/about.html').get(function(req, res) {
+  req.prismic.api.query(
+      Prismic.Predicates.at("document.tags", ['about'])
+  ).then(function(response) {
+    const document = response.results[0];
+    res.render('about', { document });
+  });
+});
+
 /*
  * Preconfigured prismic preview
  */

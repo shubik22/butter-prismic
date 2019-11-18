@@ -36,12 +36,24 @@ $(document).ready(function() {
         return false;
     });
   });
+
+  const $workLink = $('#work-link');
+  const $workSection = $('.index-work');
+  $workLink.click(function() {
+    $('html, body').animate({
+      scrollTop: ($workSection.offset().top)
+    }, 500);
+  });
 });
 
 document.addEventListener("touchstart", function(){}, true);
 
+function scrollTo(height) {
+  document.body.scrollTop = document.documentElement.scrollTop = height;
+}
+
 function scrollToTop() {
-  document.body.scrollTop = document.documentElement.scrollTop = 0;
+  scrollTo(0);
 }
 
 function openPopup(element) {

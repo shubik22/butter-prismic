@@ -2086,7 +2086,7 @@ a:hover {
   position: relative;
 }
 .dots-container .index-work {
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .dots {
   padding: 30px 0;
@@ -2511,6 +2511,54 @@ a:hover {
 }
 .work-row {
   margin-bottom: 40px;
+}
+.popup-about {
+  padding-top: 30px;
+}
+.popup-about .text-row {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid black;
+}
+.popup-about .text-row:last-of-type {
+  border-bottom: none;
+}
+.popup-about h1 {
+  font-family: 'Transcript Trial';
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.popup-about h2 {
+  font-family: 'Transcript Trial';
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.45em;
+  letter-spacing: 0.03em;
+  max-width: 80%;
+}
+.popup-about p {
+  font-family: 'Transcript Trial';
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 22px;
+  margin-top: 0px;
+}
+.popup-about ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.popup-about ul li {
+  font-family: 'Transcript Trial';
+  font-size: 20px;
+  line-height: 1.75em;
+  text-transform: lowercase;
 }
 .popup-work-subpages h3 {
   font-family: 'Transcript Trial';
