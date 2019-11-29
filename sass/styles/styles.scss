@@ -328,23 +328,90 @@ a {
   }
 }
 
-.footer {
-  padding: 30px;
+.footer-desktop {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 
   > div {
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
   }
 
   @include media-query($medium-down) {
     padding: 30px 0;
   }
+
+  .border-right {
+    border-right: 2px solid black;
+  }
+}
+
+.footer-strong {
+  font-family: 'Transcript Trial';
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.45em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+
+.footer-location {
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer-location, .footer-follow, .footer-temperature {
+  padding-top: 45px;
+}
+
+.footer-image {
+  text-align: center;
+  padding-top: 15px;
+
+  > img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .footer-location, .footer-temperature {
   font-family: 'GT Sectra Fine Trial';
+}
+
+.footer-contact, .footer-subscribe {
+  padding-top: 30px;
+
+  h2 {
+    padding-bottom: 10px;
+  }
+}
+
+.footer-contact {
+  text-align: right;
+
+  div {
+    font-family: 'Transcript Trial';
+    font-size: 16px;
+  }
+}
+
+.footer-subscribe {
+  text-align: left;
+  padding-right: 100px;
+}
+
+.footer-follow {
+  text-align: center;
+}
+
+.footer-temperature {
+  text-align: center;
+  font-size: 20px;
 }
 
 .footer-newsletter {
@@ -399,6 +466,59 @@ a {
       border: 0;
       cursor: pointer;
       outline: none;
+    }
+  }
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .footer-desktop {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: block;
+    margin-bottom: 30px;
+
+    div {
+      box-sizing: border-box;
+    }
+
+    .border-bottom {
+      border-bottom: 2px solid black;
+    }
+
+    .footer-contact {
+      text-align: left;
+      padding-left: 20px;
+      padding-bottom: 25px;
+      padding-top: 35px;
+    }
+
+    .footer-image {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-right: 20px;
+    }
+
+    .footer-subscribe {
+      padding-left: 20px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      width: 100%;
+    }
+
+    .footer-location, .footer-follow, .footer-temperature {
+      padding-bottom: 40px;
+    }
+
+    .footer-follow {
+      border-right: 2px solid black;
+      border-left: 2px solid black;
     }
   }
 }
