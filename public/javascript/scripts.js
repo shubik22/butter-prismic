@@ -20,6 +20,36 @@ $(document).ready(function() {
     $(this).addClass("dot-hovered");
   });
 
+  function addDots() {
+    const intervalId = setInterval(() => {
+      const dots = $(".dot").not(".dot-hovered");
+      if (dots.length === 0) {
+        clearInterval(intervalId);
+        removeDots();
+        return;
+      }
+      const dot = getRandom(dots);
+      $(dot).addClass("dot-hovered");
+    }, 100);
+  }
+
+  function removeDots() {
+    const intervalId = setInterval(() => {
+      const dots = $(".dot.dot-hovered");
+      if (dots.length === 0) {
+        clearInterval(intervalId);
+        addDots();
+        return;
+      }
+      const dot = getRandom(dots);
+      $(dot).removeClass("dot-hovered");
+    }, 100);
+  }
+
+  if (isMobile()) {
+    addDots();
+  }
+
   const $upArrow = $(".up-arrow");
   $(window).on("scroll", function() {
       var scrollPos = $(window).scrollTop();
@@ -54,6 +84,14 @@ function scrollTo(height) {
 
 function scrollToTop() {
   scrollTo(0);
+}
+
+function isMobile() {
+   return window.innerWidth <= 800;
+}
+
+function getRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
 function openPopup(element) {
