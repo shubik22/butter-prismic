@@ -25,7 +25,7 @@ $(document).ready(function() {
       const dots = $(".dot").not(".dot-hovered");
       if (dots.length === 0) {
         clearInterval(intervalId);
-        removeDots();
+        setTimeout(removeDots, 2000);
         return;
       }
       const dot = getRandom(dots);
@@ -38,7 +38,7 @@ $(document).ready(function() {
       const dots = $(".dot.dot-hovered");
       if (dots.length === 0) {
         clearInterval(intervalId);
-        addDots();
+        setTimeout(addDots, 2000);
         return;
       }
       const dot = getRandom(dots);
