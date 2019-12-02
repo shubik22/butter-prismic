@@ -1,4 +1,32 @@
 extends ./layout.pug
 
 block body
-  include html/contact.html
+  #contact.popup
+    .popup-header
+      h2 Contact
+      a.x(href='/')
+        svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 26.3 26.3')
+          defs
+            style.
+              .cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px;}
+          title x
+          g#Layer_2(data-name='Layer 2')
+            g#Layer_1-2(data-name='Layer 1')
+              line.cls-1(x1='1.06' y1='1.06' x2='25.24' y2='25.24')
+              line.cls-1(x1='1.06' y1='25.24' x2='25.24' y2='1.06')
+    .popup-content
+      .grid
+        .one-half.push--large--one-quarter.medium-down--one-whole
+          .contact-form
+            form(action='https://formspree.io/hello@butterstudio.nyc' method='POST')
+              div
+                input(type='text' placeholder='name' name='name')
+              div
+                input(type='email' placeholder='email' name='_replyto')
+              .contact-message
+                label(for='message') message
+                textarea#message(name='message' rows='10')
+              .contact-submit
+                input(type='submit' value='send')
+            div.contact-content
+              | !{PrismicDOM.RichText.asHtml(contactParagraph)}

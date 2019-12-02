@@ -2,6 +2,17 @@ extends ./layout.pug
 
 block body
   #about.popup
+    .popup-header
+      a.x.float-right(href='/')
+        svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 26.3 26.3')
+          defs
+            style.
+              .cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:3px;}
+          title x
+          g#Layer_2(data-name='Layer 2')
+            g#Layer_1-2(data-name='Layer 1')
+              line.cls-1(x1='1.06' y1='1.06' x2='25.24' y2='25.24')
+              line.cls-1(x1='1.06' y1='25.24' x2='25.24' y2='1.06')
     .popup-about
       each slice in document.data.body
         case slice.slice_type

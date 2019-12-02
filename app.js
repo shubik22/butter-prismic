@@ -33,7 +33,6 @@ app.use((req, res, next) => {
 
 const HTML_PAGES = [
   'services',
-  'contact'
 ];
 
 /*
@@ -62,7 +61,26 @@ app.route('/news.html').get(function(req, res) {
     Prismic.Predicates.at('document.type', 'news-post'),
     { orderings : '[my.news-post.date desc]' }
   ).then(function(response) {
-    res.render('news', { newsItems: response.results });
+    const results = response.results;
+    results.sort((a, b) => {
+      const firstOrder = a.data['order-number'];
+      const secondOrder = b.data['order-number'];
+      if (secondOrder === null) {
+        return -1;
+      }
+      if (firstOrder === null) {
+        return 1;
+      }
+      return firstOrder < secondOrder ? -1 : 1;
+    });
+    res.render('news', { newsItems: results });
+  });
+});
+
+app.route('/contact.html').get(function(req, res) {
+  req.prismic.api.getSingle('contact-page').then(function(document) {
+    const contactParagraph = document.data['contact-paragraph'];
+    res.render('contact', { contactParagraph });
   });
 });
 

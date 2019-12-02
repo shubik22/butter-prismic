@@ -16,6 +16,12 @@ $(document).ready(function() {
     swipe: false
   });
 
+  if (document.location.hash === '#work') {
+    const workSection = document.getElementsByClassName('index-work')[0];
+    const workTop = workSection.getBoundingClientRect().top;
+    scrollTo(workTop);
+  }
+
   $(".dot").mouseenter(function() {
     $(this).addClass("dot-hovered");
   });

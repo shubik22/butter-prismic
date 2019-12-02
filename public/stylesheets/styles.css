@@ -2056,6 +2056,12 @@ a {
 a:hover {
   opacity: 0.7;
 }
+.float-right {
+  float: right;
+}
+.hover-fade:hover {
+  opacity: 0.7;
+}
 .text {
   display: -webkit-box;
   display: flex;
@@ -2346,7 +2352,7 @@ a:hover {
 }
 .footer-location {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
 }
 .footer-location, .footer-follow, .footer-temperature {
   padding-top: 45px;
@@ -2441,6 +2447,10 @@ a:hover {
   cursor: pointer;
   outline: none;
 }
+.footer-email input {
+  font-family: 'Transcript Trial';
+  font-size: 16px;
+}
 .footer-mobile {
   display: none;
 }
@@ -2519,6 +2529,11 @@ a:hover {
   position: relative;
 }
 .popup-header h2 {
+  font-family: 'Transcript Trial';
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.45em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .popup-header-text {
@@ -2611,6 +2626,9 @@ a:hover {
 .work-row {
   margin-bottom: 40px;
 }
+#about .popup-header {
+  display: inline-block;
+}
 .popup-about {
   padding-top: 30px;
 }
@@ -2687,13 +2705,17 @@ a:hover {
 .popup-work-subpages .credit-section .credit-section-bold {
   font-weight: 700;
 }
-.popup-work-subpages .work-statement {
+.popup-work-subpages .work-statement p {
   font-family: 'Transcript Trial';
   font-weight: normal;
   font-size: 20px;
   line-height: 1.45em;
   letter-spacing: 0.03em;
   text-align: center;
+}
+.contact-form {
+  max-width: 550px;
+  margin: auto;
 }
 .contact-form input, .contact-form label, .contact-form textarea, .contact-form p {
   display: block;
@@ -2736,6 +2758,7 @@ a:hover {
   transition: all 0.3s;
   cursor: pointer;
   margin-bottom: 30px;
+  background-color: white;
 }
 .contact-form input[type="submit"]:hover {
   background-color: black;
@@ -2757,6 +2780,9 @@ a:hover {
 .contact-form .contact-message {
   padding-top: 20px;
   margin-bottom: 30px;
+}
+.contact-form .contact-content p {
+  line-height: 1.45em;
 }
 .popup-image img {
   display: block;
@@ -2785,6 +2811,9 @@ a:hover {
   line-height: 1.8em;
   letter-spacing: 0.03em;
   margin: 0 0 22px;
+}
+.popup-news-item a {
+  text-decoration: underline;
 }
 .popup-news-credits p:last-of-type {
   margin-bottom: 0;
