@@ -32,7 +32,7 @@ block body
             .grid.text-row
               .two-tenths.grid__item.medium-down--one-whole.push--large--one-twentieth
                 h1 #{slice.primary.title[0].text}
-                p #{slice.primary.description[0].text}
+                p.description #{slice.primary.description[0].text}
               .three-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole
                 | !{PrismicDOM.RichText.asHtml(slice.primary['column-1'])}
               .three-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole
@@ -41,7 +41,7 @@ block body
             .grid.text-row
               .two-tenths.grid__item.medium-down--one-whole.push--large--one-twentieth
                 h1 #{slice.primary.title[0].text}
-                p #{slice.primary.description[0].text}
+                p.description #{slice.primary.description[0].text}
               .two-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole
                 | !{PrismicDOM.RichText.asHtml(slice.primary['column-1'])}
               .two-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole

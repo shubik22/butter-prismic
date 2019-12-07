@@ -748,6 +748,7 @@ a {
     line-height: 1.45em;
     letter-spacing: 0.03em;
     max-width: 80%;
+    margin-bottom: 10px;
   }
 
   p {
@@ -756,6 +757,14 @@ a {
     line-height: 1.5em;
     margin-bottom: 22px;
     margin-top: 0px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .description {
+    font-family: 'GT Sectra Fine Trial';
   }
 
   ul {
