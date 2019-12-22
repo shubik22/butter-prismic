@@ -2462,6 +2462,10 @@ a:hover {
     display: block;
     margin-bottom: 30px;
   }
+  .footer-mobile .footer-strong {
+    line-height: normal;
+    margin-top: 1px;
+  }
   .footer-mobile div {
     box-sizing: border-box;
   }
@@ -2470,24 +2474,24 @@ a:hover {
   }
   .footer-mobile .footer-contact {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 0;
     padding-bottom: 25px;
     padding-top: 35px;
   }
   .footer-mobile .footer-image {
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-right: 20px;
+    padding-right: 0;
   }
   .footer-mobile .footer-subscribe {
-    padding-left: 20px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 45px 0;
     width: 100%;
   }
+  .footer-mobile .footer-temperature {
+    margin-top: -3px;
+  }
   .footer-mobile .footer-location, .footer-mobile .footer-follow, .footer-mobile .footer-temperature {
-    padding-bottom: 40px;
+    padding-bottom: 45px;
   }
   .footer-mobile .footer-follow {
     border-right: 2px solid black;
@@ -2626,6 +2630,11 @@ a:hover {
 .work-row {
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 1199px) {
+  .work-row {
+    margin-bottom: 0;
+  }
+}
 #about {
   padding-bottom: 0;
 }
@@ -2723,6 +2732,9 @@ a:hover {
   padding-bottom: 20px;
   margin-bottom: 40px;
 }
+.popup-work-subpages .work-item:last-of-type {
+  margin-bottom: 0;
+}
 .popup-work-subpages .credit-section {
   margin-bottom: 25px;
 }
@@ -2739,6 +2751,7 @@ a:hover {
   line-height: 1.45em;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 0;
 }
 .contact-form {
   max-width: 550px;
