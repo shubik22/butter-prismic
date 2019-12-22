@@ -2626,6 +2626,9 @@ a:hover {
 .work-row {
   margin-bottom: 40px;
 }
+#about {
+  padding-bottom: 0;
+}
 #about .popup-header {
   display: inline-block;
 }
@@ -2639,6 +2642,7 @@ a:hover {
 }
 .popup-about .text-row:last-of-type {
   border-bottom: none;
+  margin-bottom: 0;
 }
 .popup-about h1 {
   font-family: 'Transcript Trial';
@@ -2669,6 +2673,14 @@ a:hover {
 .popup-about p:last-of-type {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 1199px) {
+  .popup-about .grid__item {
+    padding-bottom: 30px;
+  }
+  .popup-about .grid__item:last-of-type {
+    padding-bottom: 0;
+  }
+}
 .popup-about .description {
   font-family: 'GT Sectra Fine Trial';
 }
@@ -2677,6 +2689,14 @@ a:hover {
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
+}
+.popup-about ul:last-of-type {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 1199px) {
+  .popup-about ul {
+    margin-bottom: 30px;
+  }
 }
 .popup-about ul li {
   font-family: 'Transcript Trial';

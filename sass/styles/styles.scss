@@ -715,6 +715,8 @@ a {
   .popup-header {
     display: inline-block;
   }
+
+  padding-bottom: 0;
 }
 
 .popup-about {
@@ -727,6 +729,7 @@ a {
 
     &:last-of-type {
       border-bottom: none;
+      margin-bottom: 0;
     }
   }
 
@@ -763,6 +766,16 @@ a {
     }
   }
 
+  .grid__item {
+    @include media-query($medium-down) {
+      padding-bottom: 30px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   .description {
     font-family: 'GT Sectra Fine Trial';
   }
@@ -772,6 +785,14 @@ a {
     padding: 0;
     margin: 0;
     margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include media-query($medium-down) {
+      margin-bottom: 30px;
+    }
 
     li {
       font-family: 'Transcript Trial';
