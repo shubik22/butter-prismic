@@ -2352,14 +2352,15 @@ a:hover {
 }
 .footer-location {
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
 }
 .footer-location, .footer-follow, .footer-temperature {
-  padding-top: 45px;
+  padding-top: 51px;
 }
 .footer-image {
   text-align: center;
-  padding-top: 15px;
+  padding-top: 24px;
+  padding-bottom: 0 !important;
 }
 .footer-image > img {
   width: 80px;
@@ -2390,7 +2391,7 @@ a:hover {
 }
 .footer-temperature {
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
 }
 .footer-newsletter {
   display: -webkit-box;
@@ -2476,11 +2477,11 @@ a:hover {
     text-align: left;
     padding-left: 0;
     padding-bottom: 25px;
-    padding-top: 35px;
+    padding-top: 45px;
   }
   .footer-mobile .footer-image {
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 25px !important;
     padding-right: 0;
   }
   .footer-mobile .footer-subscribe {
@@ -2640,18 +2641,32 @@ a:hover {
 }
 #about .popup-header {
   display: inline-block;
+  position: absolute;
+}
+@media only screen and (max-width: 1199px) {
+  #about .popup-header {
+    position: relative;
+  }
 }
 .popup-about {
   padding-top: 30px;
 }
+@media only screen and (max-width: 1199px) {
+  .popup-about {
+    padding-top: 0;
+  }
+}
 .popup-about .text-row {
-  margin-bottom: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
   border-bottom: 2px solid black;
 }
 .popup-about .text-row:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
+}
+.popup-about .work-row {
+  margin-bottom: 60px;
 }
 .popup-about h1 {
   font-family: 'Transcript Trial';
@@ -2674,13 +2689,16 @@ a:hover {
 }
 .popup-about p {
   font-family: 'Transcript Trial';
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5em;
   margin-bottom: 22px;
   margin-top: 0px;
 }
 .popup-about p:last-of-type {
   margin-bottom: 0;
+}
+.popup-about .about-single p {
+  font-size: 20px;
 }
 @media only screen and (max-width: 1199px) {
   .popup-about .grid__item {

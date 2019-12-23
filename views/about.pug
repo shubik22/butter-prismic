@@ -18,7 +18,7 @@ block body
         case slice.slice_type
           when 'image'
             .grid.work-row
-              .nine-elevenths.grid__item.push--large--one-eleventh.medium-down--one-whole.work-item
+              .nine-tenths.grid__item.push--large--one-twentieth.medium-down--one-whole.work-item
                 .popup-image
                   img(src=slice.primary.image.url)
           when 'full-paragraph'
@@ -26,7 +26,7 @@ block body
             .grid.text-row
               .two-tenths.grid__item.medium-down--one-whole.push--large--one-twentieth
                 h1 #{slice.primary.title[0].text}
-              .six-tenths.grid__item.push--large--one-tenth.medium-down--one-whole
+              .six-tenths.grid__item.push--large--one-tenth.medium-down--one-whole.about-single
                 | !{PrismicDOM.RichText.asHtml(slice.items[0].content)}
           when 'two-columns'
             .grid.text-row
